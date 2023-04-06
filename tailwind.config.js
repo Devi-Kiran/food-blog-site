@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // content: ["./src/**/*.{html,js}"],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blackShade: "rgba(0,0,0,0.5)",
+        sideMenuBackgroundColor: "#1C2123"
+      }
+    },
   },
   plugins: [],
 }
