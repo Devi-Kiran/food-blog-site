@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useInView } from "framer-motion";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
 import {useEffect,useRef,useState} from "react";
@@ -8,6 +7,7 @@ import "./index.css";
 
 function App() {
   const [showSideMenu,setSideMenu] = useState(false);
+  
   return (
     <div className="App">
       <Header setSideMenu={setSideMenu} backgroundColor="bg-transparent"/>

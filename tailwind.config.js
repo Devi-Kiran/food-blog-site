@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors: {
         blackShade: "rgba(0,0,0,0.5)",
-        sideMenuBackgroundColor: "#1C2123"
+        sideMenuBackgroundColor: "#1C2123",
+        sCBGC: "#1C2123",
+        borderColorY: "#666666",
+        
       }
     },
   },

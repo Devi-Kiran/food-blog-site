@@ -2,3 +2,21 @@
     background: url("https://themes.themegoods.com/grandrestaurantv6/demo9/wp-content/uploads/sites/9/2021/01/image-from-rawpixel-id-2362080-jpeg.jpg") center,linear-gradient(to bottom,#810000,#ff0202e6);
     background-blend-mode: overlay;
 }
+.sideLines::before {
+    content: "";
+    display: block;
+    background-color: rgb(255, 166, 0);
+    height: 2px;
+    width: calc(50% - 125px);
+    float: left;
+    margin-top: 15px;
+}
+.sideLines::after {
+    content: "";
+    display: block;
+    background-color: rgb(255, 166, 0);
+    height: 2px;
+    width: calc(50% - 125px);
+    float: right;
+    margin-top: 15px;
+}

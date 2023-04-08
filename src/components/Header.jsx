@@ -6,15 +6,15 @@ import {FaTripadvisor} from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
 const Header = ({setSideMenu,backgroundColor}) => {
-  const header = useRef(null);
-  const headerIsInView = useInView(header);
-  useEffect(() => {
-    console.log("header",headerIsInView);
-  },[headerIsInView])
+  // const header = useRef(null);
+  // const headerIsInView = useInView(header);
+  // useEffect(() => {
+  //   console.log("header",headerIsInView);
+  // },[headerIsInView])
 
 
   return (
-    <header ref={header} className={`py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] fixed z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] ${backgroundColor}`}>  
+    <header className={`py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] fixed z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] ${backgroundColor} select-none`}>  
       <div className="flex text-white font-black uppercase">
         <div className="hidden lg:flex items-center flex-1">
           <Link className="mr-3 p-1.5" to="/">
