@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Header from "../components/Header";
+import FlipBoxes from "../components/FlipBoxes";
 import {
   motion,
   useInView,
@@ -257,11 +258,16 @@ const Home = ({ showSideMenu, setSideMenu }) => {
 
           {/* have it text*/}
           <p
-            className={`text-[20px] text-white font-extrabold text-center ${styles.sideLines}`}
+            className={`text-[20px] text-white font-extrabold text-center mb-[40px] md:mb-[60px] ${styles.sideLines}`}
           >
             HAVE IT YOUR WAY
           </p>
+          <FlipBoxes/>
         </div>
+
+
+
+
 
         <div
           ref={textContainer}
