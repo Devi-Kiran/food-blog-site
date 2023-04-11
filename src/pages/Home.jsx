@@ -45,6 +45,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: `${showSideMenu ? "-270px" : 0}` }}
+        transition={{ease: "easeOut"}}
         className="home-page-container"
       >
         {/* black shade box when active side menu */}
@@ -151,7 +152,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
               </div>
             </div>
 
-            <div className="border-y-[3px] border-orange-400 mr-[20px] flex-1">
+            <div className="border-y-[3px] border-orange-400 md:mr-[20px] flex-1">
               <div className="h-[80px] md:h-[93.33px] lg:h-[106px] flex items-center justify-center">
                 <p className="font-black text-white text-[26px] lg:text-[40px] text-orange-400">
                   OUR BURGERS
@@ -178,7 +179,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
                 initial={isLargeScreen && {opacity: 0.2,scale: 0.3}}
                 animate={imagesAnimation}
                 transition={{duration: 0.4}}
-                className="w-[272px] md:w-[100%] select-none"
+                className="w-[272px] md:w-[100%] select-none ml-[10px]"
                 src="https://themes-themegoods.b-cdn.net/grandrestaurantv6/demo9/wp-content/uploads/sites/9/2021/01/fish-burger.png"
               />
             </div>

@@ -22,13 +22,13 @@ const ExtraInformationSection = () => {
   }, [presentBoxIsInView]);
 
   useEffect(() => {
-    if(presentBoxIsInView) {
-        titleAnimation.start({
-            y: 0,
-            opacity: 1,
-          })
+    if (presentBoxIsInView) {
+      titleAnimation.start({
+        y: 0,
+        opacity: 1,
+      });
     }
-  },[presentBoxIsInView])
+  }, [presentBoxIsInView]);
 
   const alwaysBox = useRef(null);
   const alwaysBoxIsInView = useInView(alwaysBox);
@@ -44,15 +44,14 @@ const ExtraInformationSection = () => {
   }, [alwaysBoxIsInView]);
 
   useEffect(() => {
-    if(alwaysBoxIsInView) {
-        titleAnimation2.start({
-            y: 0,
-            opacity: 1,
-          })
+    if (alwaysBoxIsInView) {
+      titleAnimation2.start({
+        y: 0,
+        opacity: 1,
+      });
     }
-  },[alwaysBoxIsInView])
+  }, [alwaysBoxIsInView]);
 
-  
   return (
     <div>
       <div className="grid grid-cols-12">
@@ -64,19 +63,16 @@ const ExtraInformationSection = () => {
           }}
         ></div>
         <div className="h-auto md:h-[797px] lg:h-[925px] bg-white col-span-12 md:col-span-6 py-[60px] px-[20px] md:py-[80px] md:px-[40px] lg:py-[140px] lg:px-[80px]">
-          <div
-            className="text-center"
-            ref={presetBox}
-          >
+          <div className="text-center" ref={presetBox}>
             <h4 className="mb-[30px] text-[18px] md:text-[22px] lg:text-[30px] font-extrabold">
               PRESENT
             </h4>
             <p className="text-[45px] md:text-[55px] lg:text-[75px] font-bold text-center mb-[-20px] md:mb-[-25px] lg:mb-[-35px] overflow-hidden">
               <motion.span
                 className="inline-block"
-                initial={{y: 110,opacity: 0,}}
+                initial={{ y: 110, opacity: 0 }}
                 animate={titleAnimation}
-                transition={{delay: 0.5,duration: 0.5}}
+                transition={{ delay: 0.5, duration: 0.5 }}
               >
                 TOMATO
               </motion.span>
@@ -84,9 +80,9 @@ const ExtraInformationSection = () => {
             <p className="text-[45px] md:text-[55px] lg:text-[75px] font-bold text-center overflow-hidden mb-[-25px] md:mb-[-30px] lg:mb-[-50px]">
               <motion.span
                 className="inline-block"
-                initial={{y: 110,opacity: 0,}}
+                initial={{ y: 110, opacity: 0 }}
                 animate={titleAnimation}
-                transition={{delay: 0.9,duration: 0.5}}
+                transition={{ delay: 0.9, duration: 0.5 }}
               >
                 ORIGINAL
               </motion.span>
@@ -132,20 +128,17 @@ const ExtraInformationSection = () => {
           </div>
         </div>
 
-        <div className="bg-sCBGC h-[500px] md:h-[797px] lg:h-[925px] bg-lime-500 col-span-12 md:col-span-6 py-[60px] px-[20px] md:py-[80px] md:px-[40px] lg:py-[140px] lg:px-[80px]">
-        <div
-            className="text-center"
-            ref={alwaysBox}
-          >
+        <div className="bg-sCBGC h-auto md:h-[797px] lg:h-[925px] bg-lime-500 col-span-12 md:col-span-6 py-[60px] px-[20px] md:py-[80px] md:px-[40px] lg:py-[140px] lg:px-[80px]">
+          <div className="text-center" ref={alwaysBox}>
             <h4 className="mb-[30px] text-white text-[18px] md:text-[22px] lg:text-[30px] font-extrabold">
               ALWAYS
             </h4>
             <p className="text-[45px] md:text-[55px] lg:text-[75px] font-bold text-center mb-[-20px] md:mb-[-25px] lg:mb-[-35px] overflow-hidden">
               <motion.span
                 className="inline-block text-green"
-                initial={{y: 110,opacity: 0,}}
+                initial={{ y: 110, opacity: 0 }}
                 animate={titleAnimation2}
-                transition={{delay: 0.5,duration: 0.5}}
+                transition={{ delay: 0.5, duration: 0.5 }}
               >
                 TOMATO
               </motion.span>
@@ -153,9 +146,9 @@ const ExtraInformationSection = () => {
             <p className="text-[45px] md:text-[55px] lg:text-[75px] font-bold text-center overflow-hidden mb-[-25px] md:mb-[-30px] lg:mb-[-50px]">
               <motion.span
                 className="inline-block text-white"
-                initial={{y: 110,opacity: 0,}}
+                initial={{ y: 110, opacity: 0 }}
                 animate={titleAnimation2}
-                transition={{delay: 0.9,duration: 0.5}}
+                transition={{ delay: 0.9, duration: 0.5 }}
               >
                 ORIGINAL
               </motion.span>
