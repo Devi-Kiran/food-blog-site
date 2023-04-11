@@ -70,5 +70,3 @@ const SideMenu = ({ showSideMenu, setSideMenu }) => {
   );
 };
 export default SideMenu;
-
-// w-[31.6%]

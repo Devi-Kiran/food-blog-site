@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import Header from "../components/Header";
 import FlipBoxes from "../components/FlipBoxes";
 import {
   motion,
@@ -24,23 +23,7 @@ const textAnimationVariant = {
 };
 
 const Home = ({ showSideMenu, setSideMenu }) => {
-  // //////////for text animation when scroll////////////////////
-  const animation = useAnimation();
-  const textContainer = useRef(null);
-  const isInView = useInView(textContainer);
-  useEffect(() => {
-    if (isInView) {
-      animation.start({
-        x: "50%",
-        transition: {
-          deley: 0.5,
-          duration: 1,
-          type: "spring",
-          mass: 1.5,
-        }
-      });
-    }
-  }, [isInView]);
+
   /////////////for images animation when scroll//////////////////
   const imagesContainer = useRef(null);
   const imagesContainerIsInView = useInView(imagesContainer);
@@ -268,22 +251,6 @@ const Home = ({ showSideMenu, setSideMenu }) => {
         </div>
         <ExtraInformationSection/>
         <FooterSection/>
-
-
-
-
-        {/* <div
-          ref={textContainer}
-          className="h-screen bg-sky-700 p-[30px] overflow-hidden"
-        >
-          <motion.h1
-            className="text-3xl uppercase font-bold"
-            animate={animation}
-          >
-            hello
-          </motion.h1>
-        </div>
-        <div className="h-screen bg-rose-500 p-[30px] overflow-hidden"></div> */}
       </motion.div>
     </div>
   );
