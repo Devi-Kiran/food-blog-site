@@ -37,10 +37,10 @@ const Header = ({setSideMenu,backgroundColor}) => {
           </Link>
         </div>
         <div className="flex-1 flex justify-end items-center">
-          <Link className="mr-3 p-1.5 hidden lg:block" to="/">
+          <Link className="mr-3 p-1.5 hidden lg:block" to="/order-online">
             order online
           </Link>
-          <Link className="mr-3 p-1.5 hidden lg:block" to="/">
+          <Link className="mr-3 p-1.5 hidden lg:block" to="/find-us">
             find us
           </Link>
           <a

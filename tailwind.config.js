@@ -8,7 +8,8 @@ module.exports = {
         sideMenuBackgroundColor: "#1C2123",
         sCBGC: "#1C2123",
         borderColorY: "#666666",
-        
+        pink: "#EF3D5B",
+        green: "#57B957"
       }
     },
   },

@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import styles from "../home.module.css";
 import { useMediaQuery } from "react-responsive";
+import ExtraInformationSection from "../components/ExtraInpormationSection";
+import FooterSection from "../components/FooterSection";
 
 const textAnimationVariant = {
   start: {
@@ -80,7 +82,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
           className={`h-screen p-[30px] relative overflow-hidden ${styles.background}`}
         >
           <div className="absolute z-10 left-[50%] top-[20%] md:top-[15%] lg:top-[13%] translate-x-[-50%] text-white">
-            <p className="text-[50px] font-bold md:text-[80px] lg:text-[100px] font-black text-center mb-[-15px] md:mb-[-40px] lg:mb-[-55px] overflow-hidden">
+            <p className="text-[50px] md:text-[80px] lg:text-[100px] font-black text-center mb-[-15px] md:mb-[-30px] lg:mb-[-55px] overflow-hidden">
               <motion.span
                 className="inline-block"
                 variants={textAnimationVariant}
@@ -100,7 +102,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
                 THE
               </motion.span>
             </p>
-            <p className="text-[50px] font-bold md:text-[80px] lg:text-[100px] font-black text-center overflow-hidden">
+            <p className="text-[50px] md:text-[80px] lg:text-[100px] font-black text-center overflow-hidden">
               <motion.span
                 className="inline-block"
                 variants={textAnimationVariant}
@@ -258,18 +260,19 @@ const Home = ({ showSideMenu, setSideMenu }) => {
 
           {/* have it text*/}
           <p
-            className={`text-[20px] text-white font-extrabold text-center mb-[40px] md:mb-[60px] ${styles.sideLines}`}
+            className={`text-[20px] text-orange-400 font-extrabold text-center mb-[40px] md:mb-[60px] ${styles.sideLines}`}
           >
             HAVE IT YOUR WAY
           </p>
           <FlipBoxes/>
         </div>
+        <ExtraInformationSection/>
+        <FooterSection/>
 
 
 
 
-
-        <div
+        {/* <div
           ref={textContainer}
           className="h-screen bg-sky-700 p-[30px] overflow-hidden"
         >
@@ -280,7 +283,7 @@ const Home = ({ showSideMenu, setSideMenu }) => {
             hello
           </motion.h1>
         </div>
-        <div className="h-screen bg-rose-500 p-[30px] overflow-hidden"></div>
+        <div className="h-screen bg-rose-500 p-[30px] overflow-hidden"></div> */}
       </motion.div>
     </div>
   );
