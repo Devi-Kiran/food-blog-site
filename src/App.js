@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
 import {useEffect,useRef,useState} from "react";
 import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
 import "./index.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home showSideMenu={showSideMenu} setSideMenu={setSideMenu}/>} />
+        <Route path="/about" element={<AboutPage/>}/>
       </Routes>
     </div>
   );
