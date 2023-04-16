@@ -11,13 +11,13 @@ const Header = ({setSideMenu,backgroundColor}) => {
     <header className={`py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] fixed z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] ${backgroundColor} select-none`}>  
       <div className="flex text-white font-black uppercase">
         <div className="hidden lg:flex items-center flex-1">
-          <Link className="mr-3 p-1.5" to="/">
+          <Link className="mr-3 p-1.5 hover:text-black duration-300" to="/">
             home
           </Link>
-          <Link className="mx-3 p-1.5" to="/our-menus">
+          <Link className="mx-3 p-1.5 hover:text-black duration-300" to="/our-menus">
             our menus
           </Link>
-          <Link className="mx-3 p-1.5" to="/about">
+          <Link className="mx-3 p-1.5 hover:text-black duration-300" to="/about">
             about
           </Link>
         </div>
@@ -31,27 +31,27 @@ const Header = ({setSideMenu,backgroundColor}) => {
           </Link>
         </div>
         <div className="flex-1 flex justify-end items-center">
-          <Link className="mr-3 p-1.5 hidden lg:block" to="/order-online">
+          <Link className="mr-3 p-1.5 hidden lg:block hover:text-black duration-300" to="/order-online">
             order online
           </Link>
-          <Link className="mr-3 p-1.5 hidden lg:block" to="/find-us">
+          <Link className="mr-3 p-1.5 hidden lg:block hover:text-black duration-300" to="/find-us">
             find us
           </Link>
           <a
-            className="mr-3 p-1.5 text-[20px] hidden md:block"
+            className="mr-3 p-1.5 text-[20px] hidden md:block hover:text-black duration-300"
             target="_blank"
             href="https://www.facebook.com/"
           >
             <BsYelp />
           </a>
           <a
-            className="mr-3 p-1.5 text-2xl hidden md:block"
+            className="mr-3 p-1.5 text-2xl hidden md:block hover:text-black"
             target="_blank"
             href="https://www.tripadvisor.com/"
           >
             <FaTripadvisor />
           </a>
-          <span  onClick={() => setSideMenu(true)} className="block text-2xl mr-[10px] md:m-0 lg:hidden">
+          <span  onClick={() => setSideMenu(true)} className="block text-2xl mr-[10px] md:m-0 lg:hidden hover:text-black duration-300">
             <IoMdMenu />
           </span>
         </div>

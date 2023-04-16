@@ -4,8 +4,8 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import styles from "../home.module.css";
 import ExtraInformationSection from "../components/ExtraInpormationSection";
 import FooterSection from "../components/FooterSection";
-import BurgerLarge from "../images/pexels-daniel-reche-3616956.jpg";
-import BurgerSmall from "../images/pexels-optical-chemist-15756902.jpg";
+import BurgerLarge from "../images/pexels-rajesh-tp-1603899.jpg";
+import BurgerSmall from "../images/pexels-pixabay-161573.jpg";
 import { useMediaQuery } from "react-responsive";
 
 const titleAnimationVarient = {
@@ -51,7 +51,7 @@ const AboutPage = () => {
     <div>
       <Parallax
         strength={300}
-        bgImage={`${!isSmallScreen ? BurgerSmall : BurgerSmall}`}
+        bgImage={`${!isSmallScreen ? BurgerLarge : BurgerSmall}`}
       >
         <div className="h-[400px] md:h-[95vh] flex justify-center items-center">
           <div>
@@ -78,14 +78,14 @@ const AboutPage = () => {
           </div>
         </div>
       </Parallax>
-      <div className="bg-sCBGC">
+      <div className="bg-sCBGC lg:h-screen px-[40px] lg:px-0 xl:px-[125px]">
         <p
           className={`pt-[60px] md:pt-[80px] md:pb-[60px]  text-[20px] text-orange-400 font-extrabold text-center mb-[30px] md:mb-[0px] ${styles.sideLines}`}
         >
           HAVE IT YOUR WAY
         </p>
 
-        <div className="flex flex-col md:flex-row md:px-[30px] pb-[50px] md:pb-[80px]">
+        <div className="flex flex-col md:flex-row pb-[100px] md:px-[30px] md:py-[100px] md:pb-[80px]">
           <div
             ref={textContainer}
             className="text-center flex-1 mb-[50px] md:mb-0"
@@ -132,7 +132,7 @@ const AboutPage = () => {
               initial={isLargeScreen && { scale: 0.3, opacity: 0 }}
               animate={imageAnimation}
               transition={{ duration: 1, delay: 0.3 }}
-              className="w-[314px] mx-auto md:w-full"
+              className="w-[314px] mx-auto md:w-full lg:w-[440px]"
               src="https://themes-themegoods.b-cdn.net/grandrestaurantv6/demo9/wp-content/uploads/sites/9/2021/01/fish-burger.png"
             />
           </div>

@@ -18,6 +18,10 @@ const sideMenuVariant = {
 };
 
 const SideMenu = ({ showSideMenu, setSideMenu }) => {
+  const closeMenu = () => {
+    setSideMenu(false);
+  }
+
   return (
     <AnimatePresence>
       {showSideMenu && (
@@ -37,30 +41,35 @@ const SideMenu = ({ showSideMenu, setSideMenu }) => {
         <Link
           className="text-[24px] font-black text-white block my-[8px] hover:text-amber-500"
           to="/"
+          onClick={closeMenu}
         >
           HOME
         </Link>
         <Link
           className="text-[24px] font-black text-white block my-[8px] hover:text-amber-500"
           to="/our-menus"
+          onClick={closeMenu}
         >
           OUR MENUS
         </Link>
         <Link
           className="text-[24px] font-black text-white block my-[8px] hover:text-amber-500"
           to="/about"
+          onClick={closeMenu}
         >
           ABOUT
         </Link>
         <Link
           className="text-[24px] font-black text-white block my-[8px] hover:text-amber-500"
           to="/order-online"
+          onClick={closeMenu}
         >
           ORDER ONLINE
         </Link>
         <Link
           className="text-[24px] font-black text-white block my-[8px] hover:text-amber-500"
           to="/find-us"
+          onClick={closeMenu}
         >
           FIND US
         </Link>

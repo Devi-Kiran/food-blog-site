@@ -42,7 +42,7 @@ const FlipBoxes = () => {
   }, [contentContainerIsInView]);
 
   return (
-    <div>
+    <div className="bg-sCBGC">
       <div className="flex flex-col lg:flex-row">
         <div ref={imageContainer} className="flex-auto lg:w-[130%]">
           <motion.img
