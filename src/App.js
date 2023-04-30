@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div className="App">
-      <Header setSideMenu={setSideMenu} backgroundColor="bg-transparent"/>
+      <Header setSideMenu={setSideMenu}/>
       <SideMenu showSideMenu={showSideMenu} setSideMenu={setSideMenu}/>
 
       <Routes>

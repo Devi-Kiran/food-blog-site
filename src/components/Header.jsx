@@ -1,64 +1,53 @@
-import React,{useEffect,useRef} from "react";
-import { Link } from "react-router-dom";
-import { IoMdMenu } from "react-icons/io";
-import {BsYelp} from "react-icons/bs";
-import {FaTripadvisor} from "react-icons/fa";
-import { motion, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import HeaderInnerSection from "./HeaderInnerSection";
 
-const Header = ({setSideMenu,backgroundColor}) => {
- 
+const headerAnimationVarient = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
+
+const Header = ({ setSideMenu, backgroundColor }) => {
+  const header = useRef(null);
+  const headerIsInView = useInView(header);
+  const [showHeader, setShowHeader] = useState(false);
+
+  useEffect(() => {
+    setShowHeader(!headerIsInView);
+  }, [headerIsInView]);
+
   return (
-    <header className={`py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] fixed z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] ${backgroundColor} select-none`}>  
-      <div className="flex text-white font-black uppercase">
-        <div className="hidden lg:flex items-center flex-1">
-          <Link className="mr-3 p-1.5 hover:text-black duration-300" to="/">
-            home
-          </Link>
-          <Link className="mx-3 p-1.5 hover:text-black duration-300" to="/our-menus">
-            our menus
-          </Link>
-          <Link className="mx-3 p-1.5 hover:text-black duration-300" to="/about">
-            about
-          </Link>
-        </div>
-        <div className="flex-1 flex lg:justify-center">
-          <Link to="/">
-            <motion.img
-              className="sm:w-[100%] md:w-[240px] lg:w-[300px] ml-[10px] md:m-0"
-              whileHover={{ backgroundColor: "rgba(255,255,255,0.2)" }}
-              src="https://themes-themegoods.b-cdn.net/grandrestaurantv6/demo9/wp-content/uploads/sites/9/2021/01/logo-white.png"
-            />
-          </Link>
-        </div>
-        <div className="flex-1 flex justify-end items-center">
-          <Link className="mr-3 p-1.5 hidden lg:block hover:text-black duration-300" to="/order-online">
-            order online
-          </Link>
-          <Link className="mr-3 p-1.5 hidden lg:block hover:text-black duration-300" to="/find-us">
-            find us
-          </Link>
-          <a
-            className="mr-3 p-1.5 text-[20px] hidden md:block hover:text-black duration-300"
-            target="_blank"
-            href="https://www.facebook.com/"
-          >
-            <BsYelp />
-          </a>
-          <a
-            className="mr-3 p-1.5 text-2xl hidden md:block hover:text-black"
-            target="_blank"
-            href="https://www.tripadvisor.com/"
-          >
-            <FaTripadvisor />
-          </a>
-          <span  onClick={() => setSideMenu(true)} className="block text-2xl mr-[10px] md:m-0 lg:hidden hover:text-black duration-300">
-            <IoMdMenu />
-          </span>
-        </div>
-      </div>
-    </header>
-  );
+    <>
+      <header
+        ref={header}
+        className="py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] absolute z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] trasparent select-none"
+      >
+        <HeaderInnerSection setSideMenu={setSideMenu} />
+      </header>
 
+      <AnimatePresence>
+        {showHeader && (
+          <motion.header
+            ref={header}
+            variants={headerAnimationVarient}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="py-[20px] md:py-[30px] md:px-[40px] lg:py-[20px] fixed z-10 top-0 left-0 right-0 lg:px-[20px] xl:px-[120px] bg-sCBGC select-none"
+          >
+            <HeaderInnerSection setSideMenu={setSideMenu} />
+          </motion.header>
+        )}
+      </AnimatePresence>
+    </>
+  );
 };
 
 export default Header;
